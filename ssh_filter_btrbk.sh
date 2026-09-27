@@ -116,7 +116,7 @@ reject_filtered_cmd()
 }
 
 
-# check for "--sudo" option before processing other options
+# check for "--sudo" or "--doas" option before processing other options
 sudo_prefix=
 for key in "$@"; do
     if [ "${key}" = '--sudo' ]; then

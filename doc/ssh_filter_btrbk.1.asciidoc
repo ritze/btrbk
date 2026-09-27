@@ -95,6 +95,9 @@ send-stream).
     Allow btrfs commands to be called via sudo. Enable this if you
     have "backend btrfs-progs-sudo" in your btrbk configuration file.
 
+--doas::
+    Allow btrfs commands to be called via doas. Enable this if you
+    have "backend btrfs-progs-doas" in your btrbk configuration file.
 
 AVAILABILITY
 ------------
