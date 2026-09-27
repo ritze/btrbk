@@ -35,8 +35,8 @@ system below '<path>'.
 takes some global configuration options from btrbk.conf(5) if present.
 
 *lsbtr* requires 'root privileges' to run correctly. Alternatively,
-consider using "btrfs-progs-sudo", "btrfs-progs-doas"
- or "btrfs-progs-btrbk" backends, all of which allows
+consider using "btrfs-progs-sudo", "btrfs-progs-doas",
+btrfs-progs-run0" or "btrfs-progs-btrbk" backends, all of which allows
 you to run lsbtr as a regular user. Refer to configuration option
 'backend' in btrbk.conf(5) for more details.
 

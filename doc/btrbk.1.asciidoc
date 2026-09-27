@@ -38,9 +38,10 @@ backups from one source to multiple destinations.
 
 For most operations, *btrbk* requires 'root privileges' to run
 correctly. Alternatively, consider using "btrfs-progs-sudo",
-"btrfs-progs-doas" or "btrfs-progs-btrbk" backends, all of which
-allows you to run btrbk as a regular user. Refer to configuration
-option 'backend' in btrbk.conf(5) for more details.
+"btrfs-progs-doas", "btrfs-progs-btrbk" or "btrfs-progs-run0"
+backends, all of which allows you to run btrbk as a regular user.
+Refer to configuration option 'backend' in btrbk.conf(5) for more
+details.
 
 
 === Snapshots and Backups

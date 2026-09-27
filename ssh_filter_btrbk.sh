@@ -116,7 +116,7 @@ reject_filtered_cmd()
 }
 
 
-# check for "--sudo" or "--doas" option before processing other options
+# check for "--sudo", "--doas" or "run0" option before processing other options
 sudo_prefix=
 for key in "$@"; do
     if [ "${key}" = '--sudo' ]; then
@@ -124,6 +124,9 @@ for key in "$@"; do
     fi
     if [ "${key}" = '--doas' ]; then
         sudo_prefix='doas -n '
+    fi
+    if [ "${key}" = '--run0' ]; then
+        sudo_prefix='run0 -n '
     fi
 done
 
@@ -135,7 +138,7 @@ while [ "$#" -ge 1 ]; do
           enable_log=1
           ;;
 
-      --sudo|--doas)
+      --sudo|--doas|--run0)
           # already processed above
           ;;
 

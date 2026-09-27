@@ -137,10 +137,10 @@ my %config_options = (
   group                       => { default => undef,         accept => [ qr/$group_match/ ], allow_multiple => 1, split => 1 },
   noauto                      => { default => undef,         accept => [qw( yes no )] },
 
-  backend                     => { default => "btrfs-progs", accept => [qw(    btrfs-progs btrfs-progs-btrbk btrfs-progs-sudo btrfs-progs-doas )] },
-  backend_local               => { default => undef,         accept => [qw( no btrfs-progs btrfs-progs-btrbk btrfs-progs-sudo btrfs-progs-doas )] },
-  backend_remote              => { default => undef,         accept => [qw( no btrfs-progs btrfs-progs-btrbk btrfs-progs-sudo btrfs-progs-doas )] },
-  backend_local_user          => { default => undef,         accept => [qw( no btrfs-progs btrfs-progs-btrbk btrfs-progs-sudo btrfs-progs-doas )] },
+  backend                     => { default => "btrfs-progs", accept => [qw(    btrfs-progs btrfs-progs-btrbk btrfs-progs-sudo btrfs-progs-doas btrfs-progs-run0 )] },
+  backend_local               => { default => undef,         accept => [qw( no btrfs-progs btrfs-progs-btrbk btrfs-progs-sudo btrfs-progs-doas btrfs-progs-run0 )] },
+  backend_remote              => { default => undef,         accept => [qw( no btrfs-progs btrfs-progs-btrbk btrfs-progs-sudo btrfs-progs-doas btrfs-progs-run0 )] },
+  backend_local_user          => { default => undef,         accept => [qw( no btrfs-progs btrfs-progs-btrbk btrfs-progs-sudo btrfs-progs-doas btrfs-progs-run0 )] },
 
   compat                      => { default => undef,         accept => [qw( no busybox ignore_receive_errors )], split => 1 },
   compat_local                => { default => undef,         accept => [qw( no busybox ignore_receive_errors )], split => 1 },
@@ -300,6 +300,7 @@ my %backend_cmd_map = (
   "btrfs-progs-btrbk" => { map +( $_ => [ s/ /-/gr ] ), @btrfs_cmd },
   "btrfs-progs-sudo"  => { map +( $_ => [ qw( sudo -n ), split(" ", $_) ] ), @btrfs_cmd, @system_cmd },
   "btrfs-progs-doas"  => { map +( $_ => [ qw( doas -n ), split(" ", $_) ] ), @btrfs_cmd, @system_cmd },
+  "btrfs-progs-run0"  => { map +( $_ => [ qw( run0 -n ), split(" ", $_) ] ), @btrfs_cmd, @system_cmd },
 );
 
 # keys used in raw target sidecar files (.info):

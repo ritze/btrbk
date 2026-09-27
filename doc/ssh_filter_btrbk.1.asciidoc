@@ -99,6 +99,11 @@ send-stream).
     Allow btrfs commands to be called via doas. Enable this if you
     have "backend btrfs-progs-doas" in your btrbk configuration file.
 
+--run0::
+    Allow btrfs commands to be called via run0. Enable this if you
+    have "backend btrfs-progs-run0" in your btrbk configuration file.
+
+
 AVAILABILITY
 ------------
 

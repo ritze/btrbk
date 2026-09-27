@@ -389,6 +389,9 @@ constraints.
 *btrfs-progs-doas*::
     Similar to btrfs-progs-sudo, using prefix "doas -n".
 
+*btrfs-progs-run0*::
+    Similar to btrfs-progs-sudo, using prefix "run0 -n".
+
 If you want to set this option for local or remote hosts only, set
 *backend_local* or *backend_remote* (e.g. "backend_remote
 btrfs-progs-btrbk").
